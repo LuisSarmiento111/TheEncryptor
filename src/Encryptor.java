@@ -105,21 +105,10 @@ public class Encryptor
      */
     public String decryptMessage(String encryptedMessage)
     {
-        String str = "";
-        while (encryptedMessage.length() > numRows * numCols) {
-            fillBlock(encryptedMessage);
-            for (int i = 0; i < numRows; i++) {
-                fillBlock(encryptBlock());
-            }
-            str += encryptBlock();
-            encryptedMessage = encryptedMessage.substring(numCols * numRows);
-        }
-        fillBlock(encryptedMessage);
         for (int i = 0; i < numRows; i++) {
-            fillBlock(encryptBlock());
+            encryptedMessage = encryptMessage(encryptedMessage);
+            System.out.println(encryptedMessage);
         }
-        str += encryptBlock();
-        str = str.substring(0, str.length() - ((numRows * numCols) - encryptedMessage.length()));
-        return str;
+        return encryptedMessage;
     }
 }
