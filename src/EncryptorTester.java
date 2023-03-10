@@ -222,7 +222,7 @@ public class EncryptorTester
     // -------------------------------------
     System.out.println("\n---- TESTING PART D ----");
     Encryptor encryptorTest2 = new Encryptor(2, 3);
-    String actualDecrypted1 = encryptorTest2.decryptMessage("Mte eati dmnitgAhA");
+    String actualDecrypted1 = encryptorTest2.decryptMessage("Mte eati dmnitgAhA"); //3
     String expectedDecrypted1 = "Meet at midnight";
     if (actualDecrypted1.equals(expectedDecrypted1))
     {
@@ -235,7 +235,7 @@ public class EncryptorTester
       System.out.println("  ACTUAL: " + actualDecrypted1);
     }
     
-    String actualDecrypted2 = encryptorTest2.decryptMessage("L'est goou tsei.d A ryeouK  Owi tthhaAtA?A");
+    String actualDecrypted2 = encryptorTest2.decryptMessage("L'est goou tsei.d A ryeouK  Owi tthhaAtA?A"); // 7
     String expectedDecrypted2 = "Let's go outside. Are you OK with that?";
     if (actualDecrypted2.equals(expectedDecrypted2))
     {
@@ -249,7 +249,7 @@ public class EncryptorTester
     }
     
     Encryptor encryptorTester5 = new Encryptor(4, 3);
-    String actualDecrypted3 = encryptorTester5.decryptMessage("Iats wh s iRELgaAYrtL e swneh  tooNfl o iauaxbt fi aalttmyh metaoso v  smloAa wAltnA");
+    String actualDecrypted3 = encryptorTester5.decryptMessage("Iats wh s iRELgaAYrtL e swneh  tooNfl o iauaxbt fi aalttmyh metaoso v  smloAa wAltnA"); // 7
     String expectedDecrypted3 = "I saw this REALLY great show on Netflix about a family that moves to a small town";
     if (actualDecrypted3.equals(expectedDecrypted3))
     {
@@ -276,7 +276,7 @@ public class EncryptorTester
       System.out.println("  ACTUAL: " + actualDecrypted5);
     }
     
-    Encryptor encryptorTesterM = new Encryptor(2, 4);
+    Encryptor encryptorTesterM = new Encryptor(2, 4); //2
     String actualDecrypted6 = encryptorTesterM.decryptMessage("A BECFDGHC DA BEFAGBHC D HE FAGBCFDG HE!");
     String expectedDecrypted6 = "ABCD EFGH ABCD EFGH ABCD EFGH ABCD EFGH!";
     if (actualDecrypted6.equals(expectedDecrypted6))
